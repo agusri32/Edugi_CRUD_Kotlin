@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         ref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                /*
+
                 if (snapshot.exists()){
                     wrgList.clear()
                     for (h in snapshot.children){
@@ -45,26 +45,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         }
                     }
 
-                    val adapter = WargaAdapter(this@MainActivity, R.layout.item_kerjaan, wrgList)
+                    val adapter = WargaAdapter(this@MainActivity, R.layout.item_warga, wrgList)
                     listWrg.adapter = adapter
                 }
-                */
             }
-
             override fun onCancelled(error: DatabaseError) {
-
             }
-
         })
-
-        listWrg.setOnItemClickListener { parent, view, position, id ->
-            val warga = wrgList.get(position)
-
-            val intent = Intent(this@MainActivity, AddOccupationActivity::class.java)
-            intent.putExtra(AddOccupationActivity.EXTRA_ID, warga.id)
-            intent.putExtra(AddOccupationActivity.EXTRA_NAMA, warga.nama)
-            startActivity(intent)
-        }
     }
 
     override fun onClick(v: View?) {
@@ -85,9 +72,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             return
         }
 
-
         val wrgId = ref.push().key
-
         val wrg = Warga(wrgId!!,name,asal)
 
         ref.child(wrgId).setValue(wrg).addOnCompleteListener {

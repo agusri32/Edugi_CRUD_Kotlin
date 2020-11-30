@@ -47,9 +47,6 @@ class WargaAdapter (val mCtx : Context, val layoutResId : Int, val wrgList :List
         //take data from database
         etNama.setText(warga.nama)
         etAsal.setText(warga.asal)
-
-
-
         builder.setView(view)
 
         builder.setPositiveButton("Update"){ p0, p1 ->
@@ -79,23 +76,19 @@ class WargaAdapter (val mCtx : Context, val layoutResId : Int, val wrgList :List
         }
 
         builder.setNeutralButton("No"){p0, p1 ->
-
         }
 
         builder.setNegativeButton("Delete"){p0,p1 ->
-
             val dbWrga = FirebaseDatabase.getInstance().getReference("warga").child(warga.id)
-            val dbKerjaWarga = FirebaseDatabase.getInstance().getReference("data_warga").child(warga.id)
+            //val dbKerjaWarga = FirebaseDatabase.getInstance().getReference("data_warga").child(warga.id)
 
             dbWrga.removeValue()
-            dbKerjaWarga.removeValue()
+            //dbKerjaWarga.removeValue()
 
             Toast.makeText(mCtx, "Data berhasil di hapus", Toast.LENGTH_SHORT).show()
-
         }
 
         val alert = builder.create()
         alert.show()
-
     }
 }
