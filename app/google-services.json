@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "734882904180",
-    "firebase_url": "https://aplikasicrud-b05de.firebaseio.com",
-    "project_id": "aplikasicrud-b05de",
-    "storage_bucket": "aplikasicrud-b05de.appspot.com"
+    "project_number": "1089187667216",
+    "firebase_url": "https://aplikasicrud-f01ca.firebaseio.com",
+    "project_id": "aplikasicrud-f01ca",
+    "storage_bucket": "aplikasicrud-f01ca.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:734882904180:android:9847096d24aed535e1f921",
+        "mobilesdk_app_id": "1:1089187667216:android:ab5ce8cd69ab639a7c1995",
         "android_client_info": {
           "package_name": "com.itdev.aplikasicrud"
         }
       },
       "oauth_client": [
         {
-          "client_id": "734882904180-4ce6gpu50jh4sq0raupi2ucdmogatk3n.apps.googleusercontent.com",
+          "client_id": "1089187667216-bt3dd7aoev7imc10rr7qp7pksq4hbj7q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD50-fK_JjR9h0eOtSkbK7iI5Wf8URhaUA"
+          "current_key": "AIzaSyARu2o8HMW2WXpjPKZDg00-VpBkodaDeeg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "734882904180-4ce6gpu50jh4sq0raupi2ucdmogatk3n.apps.googleusercontent.com",
+              "client_id": "1089187667216-bt3dd7aoev7imc10rr7qp7pksq4hbj7q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

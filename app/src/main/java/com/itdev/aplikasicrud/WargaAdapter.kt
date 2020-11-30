@@ -44,7 +44,7 @@ class WargaAdapter (val mCtx : Context, val layoutResId : Int, val wrgList :List
         val  etNama : EditText = view.findViewById<EditText>(R.id.et_nama)
         val  etAsal : EditText = view.findViewById<EditText>(R.id.et_asal)
 
-//      take data from database
+        //take data from database
         etNama.setText(warga.nama)
         etAsal.setText(warga.asal)
 
@@ -53,10 +53,10 @@ class WargaAdapter (val mCtx : Context, val layoutResId : Int, val wrgList :List
         builder.setView(view)
 
         builder.setPositiveButton("Update"){ p0, p1 ->
-//        firebase database for update context
+            //firebase database for update context
             val dbWrg = FirebaseDatabase.getInstance().getReference("warga")
 
-//        catch changes content for input into database
+            //catch changes content for input into database
             val nama = etNama.text.toString().trim()
             val asal = etAsal.text.toString().trim()
 

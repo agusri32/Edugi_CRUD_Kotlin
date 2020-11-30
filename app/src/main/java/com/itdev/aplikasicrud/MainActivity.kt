@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         ref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                /*
                 if (snapshot.exists()){
                     wrgList.clear()
                     for (h in snapshot.children){
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     val adapter = WargaAdapter(this@MainActivity, R.layout.item_kerjaan, wrgList)
                     listWrg.adapter = adapter
                 }
+                */
             }
 
             override fun onCancelled(error: DatabaseError) {
